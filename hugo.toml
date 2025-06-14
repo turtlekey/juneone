@@ -1,0 +1,41 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-US'
+title = 'Juneone'
+[params]
+  favicons = '🥑'
+
+[menus]
+  [[menus.main]]
+    name = '主页'
+    pageRef = '/'
+    weight = 10
+
+  [[menus.main]]
+    name = '文章'
+    pageRef = '/posts'
+    weight = 20
+
+  [[menus.main]]
+    name = '分类'
+    pageRef = '/categories'
+    weight = 25
+
+  [[menus.main]]
+    name = '标签'
+    pageRef = '/tags'
+    weight = 30
+  
+  [[menus.main]]
+    name = '关于'
+    pageRef = '/miscell/about'
+    weight = 40
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.146.0'
+
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
