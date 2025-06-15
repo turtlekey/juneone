@@ -3,18 +3,9 @@ languageCode = 'en-US'
 title = 'Juneone'
 [params]
   favicons = '🥑'
+  author = 'Juneone'
 
 [menus]
-  [[menus.main]]
-    name = '主页'
-    pageRef = '/'
-    weight = 10
-
-  [[menus.main]]
-    name = '文章'
-    pageRef = '/posts'
-    weight = 20
-
   [[menus.main]]
     name = '分类'
     pageRef = '/categories'
@@ -27,7 +18,7 @@ title = 'Juneone'
   
   [[menus.main]]
     name = '关于'
-    pageRef = '/miscell/about'
+    pageRef = '/about'
     weight = 40
 
 [module]
@@ -39,3 +30,15 @@ title = 'Juneone'
 [taxonomies]
   category = "categories"
   tag = "tags"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = false
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+    [markup.goldmark.renderer]
+      unsafe = true
